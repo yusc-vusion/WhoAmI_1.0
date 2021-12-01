@@ -184,6 +184,41 @@ public class ResultActivity extends AppCompatActivity {
             }
         });
 
+        ////
+
+        //나의얼굴분석기록버튼
+        Button btn_searchRecord = (Button)findViewById(R.id.btn_drawer_myfaceRecord);
+        btn_searchRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SearchRecordActivity.class);
+                intent.putExtra("nickname", nickname);
+                startActivity(intent);
+            }
+        });
+
+        //분석결과평가하기버튼
+        Button btn_evaluate = (Button)findViewById(R.id.btn_drawer_faceResultEsti);
+        btn_evaluate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), com.yusesc.myapplication.Evaluate.class);
+                intent.putExtra("nickname", nickname);
+                startActivity(intent);
+            }
+        });
+
+        //결과아이돌리스트버튼
+        Button btn_idolList = (Button)findViewById(R.id.btn_drawer_idolList);
+        btn_idolList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), com.yusesc.myapplication.IdolListActivity.class);
+                intent.putExtra("nickname", nickname);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
